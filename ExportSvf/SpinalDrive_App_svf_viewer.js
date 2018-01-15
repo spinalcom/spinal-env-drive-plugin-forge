@@ -29,7 +29,7 @@ class SpinalDrive_App_FileExplorer_svf_viewer extends SpinalDrive_App {
     }
     path += '/' + obj.file.name;
     let myWindow = window.open('', '');
-    let location = "/html/viewerShare/index.html#!/viewer/" + btoa(path);
+    let location = "/html/viewer-annotations/index.html#!/viewer/" + btoa(path);
     myWindow.document.location = location;
     myWindow.focus();
   }
