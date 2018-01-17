@@ -39,7 +39,7 @@ class SpinalDrive_App_FileExplorer_export_svf extends SpinalDrive_App {
           console.log(f);
           f.load((m) => {
             console.log(m);
-            let ext = /(?:\.([^.]+))?$/.exec(filename.get())[1];
+            let ext = /(?:\.([^.]+))?$/.exec(obj.file.name)[1];
             curr_dir.add_file(filename, 0, {
               model_type: 'BIM Project',
               rvt: new Ptr(m),
