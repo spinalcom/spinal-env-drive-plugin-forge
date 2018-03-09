@@ -64,9 +64,12 @@ class SpinalDrive_App_FileExplorer_export_svf extends SpinalDrive_App {
         if (file instanceof File) {
           if (file._info.model_type && file._info.model_type.get() === 'Path') {
             let ext = /(?:\.([^.]+))?$/.exec(file.name.get())[1];
-            let known_ext = ['rvt', 'dwg', 'ifc'];
+            let known_ext = ['3DM', '3DS', 'ASM', 'CATPART', 'CATPRODUCT', 'CGR', 'COLLABORATION', 'DAE', 'DGN', 'DLV3', 'DWF', 'DWFX', 'DWG',
+              'DWT', 'DXF', 'EMODE', 'EXP', 'F2D', 'F3D', 'FBX', 'G', 'GBXML', 'GLB', 'GLTF', 'IAM', 'IDW', 'IFC', 'IGE', 'IGES', 'IGS', 'IPT',
+              'IWM', 'JT', 'MAX', 'MODEL', 'NEU', 'NWC', 'NWD', 'OBJ', 'PDF', 'PMLPRJ', 'PMLPRJZ', 'PRT', 'PSMODEL', 'RCP', 'RVT', 'SAB', 'SAT',
+              'SESSION', 'SKP', 'SLDASM', 'SLDPRT', 'STE', 'STEP', 'STL', 'STLA', 'STLB', 'STP', 'STPZ', 'WIRE', 'X_B', 'X_T', 'XAS', 'XPR', 'ZIP'];
             for (let i = 0; i < known_ext.length; i++) {
-              if (ext === known_ext[i])
+              if (ext.toUpperCase() === known_ext[i].toUpperCase())
                 return true;
             }
           }
