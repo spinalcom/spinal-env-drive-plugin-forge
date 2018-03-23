@@ -9,7 +9,7 @@ class SpinalDrive_App_FileExplorer_export_svf extends SpinalDrive_App {
    * @memberof SpinalDrive_App_FileExplorer_export_svf
    */
   constructor() {
-    super("exportSvfFileExplorer", "Create BIM Project", 6, "dvr", "Create BIM Project");
+    super("exportSvfFileExplorer", "Create Digital Twin", 6, "dvr", "Create Digital Twin");
     this.order_priority = 5;
   }
   /**
@@ -41,7 +41,7 @@ class SpinalDrive_App_FileExplorer_export_svf extends SpinalDrive_App {
             console.log(m);
             let ext = /(?:\.([^.]+))?$/.exec(obj.file.name)[1];
             curr_dir.add_file(filename, 0, {
-              model_type: 'BIM Project',
+              model_type: 'Digital twin',
               rvt: new Ptr(m),
               ext: ext
             });
@@ -67,7 +67,8 @@ class SpinalDrive_App_FileExplorer_export_svf extends SpinalDrive_App {
             let known_ext = ['3DM', '3DS', 'ASM', 'CATPART', 'CATPRODUCT', 'CGR', 'COLLABORATION', 'DAE', 'DGN', 'DLV3', 'DWF', 'DWFX', 'DWG',
               'DWT', 'DXF', 'EMODE', 'EXP', 'F2D', 'F3D', 'FBX', 'G', 'GBXML', 'GLB', 'GLTF', 'IAM', 'IDW', 'IFC', 'IGE', 'IGES', 'IGS', 'IPT',
               'IWM', 'JT', 'MAX', 'MODEL', 'NEU', 'NWC', 'NWD', 'OBJ', 'PDF', 'PMLPRJ', 'PMLPRJZ', 'PRT', 'PSMODEL', 'RCP', 'RVT', 'SAB', 'SAT',
-              'SESSION', 'SKP', 'SLDASM', 'SLDPRT', 'STE', 'STEP', 'STL', 'STLA', 'STLB', 'STP', 'STPZ', 'WIRE', 'X_B', 'X_T', 'XAS', 'XPR', 'ZIP'];
+              'SESSION', 'SKP', 'SLDASM', 'SLDPRT', 'STE', 'STEP', 'STL', 'STLA', 'STLB', 'STP', 'STPZ', 'WIRE', 'X_B', 'X_T', 'XAS', 'XPR', 'ZIP'
+            ];
             for (let i = 0; i < known_ext.length; i++) {
               if (ext.toUpperCase() === known_ext[i].toUpperCase())
                 return true;

@@ -44,7 +44,8 @@ class SpinalDrive_App_FileExplorer_svf_viewer extends SpinalDrive_App {
     if (d && d.file && d.file._server_id) {
       let file = FileSystem._objects[d.file._server_id];
       if (file && file instanceof File && file._info.model_type &&
-        file._info.model_type.get() === 'BIM Project') {
+        (file._info.model_type.get() === 'BIM Project' ||
+          file._info.model_type.get() === "Digital twin")) {
         return true;
       }
     }
