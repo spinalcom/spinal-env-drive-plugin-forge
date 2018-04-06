@@ -36,3 +36,4 @@ concat_lib(require("./ExportSvf/SpinalDrive_App_export_svf"));
 spinalDrive_Env.add_applications('FileExplorer', new SpinalDrive_App_FileExplorer_svf_viewer());
 spinalDrive_Env.add_applications('FileExplorer', new SpinalDrive_App_FileExplorer_export_svf());
 spinalDrive_Env.context_file_exp_app_icon["BIM Project"] = "location_city";
+spinalDrive_Env.context_file_exp_app_icon["Digital twin"] = "location_city";
