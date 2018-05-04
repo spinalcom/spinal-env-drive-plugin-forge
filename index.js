@@ -1,19 +1,19 @@
 /**
  * Copyright 2015 SpinalCom - www.spinalcom.com
- * 
+ *
  * This file is part of SpinalCore.
- * 
+ *
  * Please read all of the following terms and conditions
  * of the Free Software license Agreement ("Agreement")
  * carefully.
- * 
+ *
  * This Agreement is a legally binding contract between
  * the Licensee (as defined below) and SpinalCom that
  * sets forth the terms and conditions that govern your
  * use of the Program. By installing and/or using the
  * Program, you agree to abide by all the terms and
  * conditions stated or referenced herein.
- * 
+ *
  * If you do not agree to abide by these terms and
  * conditions, do not demonstrate your acceptance and do
  * not install or use the Program.
@@ -33,7 +33,15 @@ function concat_lib(lib) {
 concat_lib(require("./ExportSvf/SpinalDrive_App_svf_viewer"));
 concat_lib(require("./ExportSvf/SpinalDrive_App_export_svf"));
 
-spinalDrive_Env.add_applications('FileExplorer', new SpinalDrive_App_FileExplorer_svf_viewer());
-spinalDrive_Env.add_applications('FileExplorer', new SpinalDrive_App_FileExplorer_export_svf());
-spinalDrive_Env.context_file_exp_app_icon["BIM Project"] = "location_city";
-spinalDrive_Env.context_file_exp_app_icon["Digital twin"] = "location_city";
+window.spinalDrive_Env.add_applications(
+  "FileExplorer",
+  new module.exports.FileExplorerSvfViewer()
+);
+window.spinalDrive_Env.add_applications(
+  "FileExplorer",
+  new module.exports.FileExplorerExportSvf()
+);
+window.spinalDrive_Env.context_file_exp_app_icon["BIM Project"] =
+  "location_city";
+window.spinalDrive_Env.context_file_exp_app_icon["Digital twin"] =
+  "location_city";

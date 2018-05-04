@@ -4,7 +4,10 @@
   "description": "forge convert and open viewer plugin in spinal-browser-drive",
   "main": "index.js",
   "dependencies": {
-    "spinal-env-drive-core": "git+https://github.com/spinalcom/spinal-env-drive-core.git"
+    "spinal-core-connectorjs":
+      "git+https://github.com/spinalcom/spinal-core-connectorjs.git",
+    "spinal-env-drive-core":
+      "git+https://github.com/spinalcom/spinal-env-drive-core.git"
   },
   "devDependencies": {},
   "scripts": {
