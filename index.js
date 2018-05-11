@@ -30,13 +30,8 @@ function concat_lib(lib) {
     module.exports[key] = lib[key];
   }
 }
-concat_lib(require("./ExportSvf/SpinalDrive_App_svf_viewer"));
 concat_lib(require("./ExportSvf/SpinalDrive_App_export_svf"));
 
-window.spinalDrive_Env.add_applications(
-  "FileExplorer",
-  new module.exports.FileExplorerSvfViewer()
-);
 window.spinalDrive_Env.add_applications(
   "FileExplorer",
   new module.exports.FileExplorerExportSvf()

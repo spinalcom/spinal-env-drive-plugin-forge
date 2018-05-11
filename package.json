@@ -1,19 +1,15 @@
 {
   "name": "spinal-env-drive-plugin-forge",
-  "version": "v1.0.5",
+  "version": "v1.0.6",
   "description": "forge convert and open viewer plugin in spinal-browser-drive",
   "main": "index.js",
   "dependencies": {
-    "spinal-core-connectorjs":
-      "git+https://github.com/spinalcom/spinal-core-connectorjs.git",
-    "spinal-env-drive-core":
-      "git+https://github.com/spinalcom/spinal-env-drive-core.git"
+    "spinal-core-connectorjs": "git+https://github.com/spinalcom/spinal-core-connectorjs.git",
+    "spinal-env-drive-core": "git+https://github.com/spinalcom/spinal-env-drive-core.git"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "npm run create_plugin_template",
-    "create_plugin_template": "create_plugin_template"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Laurent HA TAM DAN",
   "license": "SEE LICENSE IN license.pdf"
