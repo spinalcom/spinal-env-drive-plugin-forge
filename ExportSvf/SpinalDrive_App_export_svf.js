@@ -70,7 +70,7 @@ class SpinalDrive_App_FileExplorer_export_svf extends SpinalDrive_App {
       let file = window.FileSystem._objects[d.file._server_id];
       if (file) {
         if (file instanceof File) {
-          if (file._info.model_type && file._info.model_type.get() === "Path") {
+          if (file._info.model_type && (file._info.model_type.get() === "Path" || file._info.model_type.get() === "HttpPath")) {
             let ext = /(?:\.([^.]+))?$/.exec(file.name.get())[1];
             let known_ext = [
               "3DM",
